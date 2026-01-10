@@ -1,0 +1,316 @@
+config:
+  default_byte_order: BE
+  register_address_type: u8
+  defmt_feature: "defmt-03"
+
+DataB:
+  type: register
+  address: 0x00
+  size_bits: 8
+  description: "Data register for Bank B I/O[15:8]"
+  fields:
+    IO_15:
+      base: bool
+      start: 7
+    IO_14:
+      base: bool
+      start: 6
+    IO_13:
+      base: bool
+      start: 5
+    IO_12:
+      base: bool
+      start: 4
+    IO_11:
+      base: bool
+      start: 3
+    IO_10:
+      base: bool
+      start: 2
+    IO_09:
+      base: bool
+      start: 1
+    IO_08:
+      base: bool
+      start: 0
+
+DataA:
+  type: register
+  address: 0x01
+  size_bits: 8
+  # reset_value: 0x832B
+  description: "Data register for Bank A I/O[7:0] "
+  fields:
+    IO_7:
+      base: bool
+      start: 7
+    IO_6:
+      base: bool
+      start: 6
+    IO_5:
+      base: bool
+      start: 5
+    IO_4:
+      base: bool
+      start: 4
+    IO_3:
+      base: bool
+      start: 3
+    IO_2:
+      base: bool
+      start: 2
+    IO_1:
+      base: bool
+      start: 1
+    IO_0:
+      base: bool
+      start: 0
+
+DirB:
+  type: register
+  address: 0x02
+  size_bits: 8
+  description: "Direction register for Bank B I/O[15:8] "
+  fields:
+    IO_15:
+      base: bool
+      start: 7
+    IO_14:
+      base: bool
+      start: 6
+    IO_13:
+      base: bool
+      start: 5
+    IO_12:
+      base: bool
+      start: 4
+    IO_11:
+      base: bool
+      start: 3
+    IO_10:
+      base: bool
+      start: 2
+    IO_09:
+      base: bool
+      start: 1
+    IO_08:
+      base: bool
+      start: 0
+
+DirA:
+  type: register
+  address: 0x03
+  size_bits: 8
+  # reset_value: 0x832B
+  description: "Direction register for Bank A I/O[7:0]"
+  fields:
+    IO_7:
+      base: bool
+      start: 7
+    IO_6:
+      base: bool
+      start: 6
+    IO_5:
+      base: bool
+      start: 5
+    IO_4:
+      base: bool
+      start: 4
+    IO_3:
+      base: bool
+      start: 3
+    IO_2:
+      base: bool
+      start: 2
+    IO_1:
+      base: bool
+      start: 1
+    IO_0:
+      base: bool
+      start: 0
+
+PullUpB:
+  type: register
+  address: 0x04
+  size_bits: 8
+  description: "Pull-up register for Bank B I/O[15:8]"
+  fields:
+    IO_15:
+      base: bool
+      start: 7
+    IO_14:
+      base: bool
+      start: 6
+    IO_13:
+      base: bool
+      start: 5
+    IO_12:
+      base: bool
+      start: 4
+    IO_11:
+      base: bool
+      start: 3
+    IO_10:
+      base: bool
+      start: 2
+    IO_09:
+      base: bool
+      start: 1
+    IO_08:
+      base: bool
+      start: 0
+
+PullUpA:
+  type: register
+  address: 0x05
+  size_bits: 8
+  description: "Pull-up register for Bank A I/O[7:0]"
+  fields:
+    IO_7:
+      base: bool
+      start: 7
+    IO_6:
+      base: bool
+      start: 6
+    IO_5:
+      base: bool
+      start: 5
+    IO_4:
+      base: bool
+      start: 4
+    IO_3:
+      base: bool
+      start: 3
+    IO_2:
+      base: bool
+      start: 2
+    IO_1:
+      base: bool
+      start: 1
+    IO_0:
+      base: bool
+      start: 0
+
+PullDownB:
+  type: register
+  address: 0x06
+  size_bits: 8
+  description: "Pull-down register for Bank B I/O[15:8]"
+  fields:
+    IO_15:
+      base: bool
+      start: 7
+    IO_14:
+      base: bool
+      start: 6
+    IO_13:
+      base: bool
+      start: 5
+    IO_12:
+      base: bool
+      start: 4
+    IO_11:
+      base: bool
+      start: 3
+    IO_10:
+      base: bool
+      start: 2
+    IO_09:
+      base: bool
+      start: 1
+    IO_08:
+      base: bool
+      start: 0
+
+PullDownA:
+  type: register
+  address: 0x07
+  size_bits: 8
+  description: "Pull-down register for Bank A I/O[7:0]"
+  fields:
+    IO_7:
+      base: bool
+      start: 7
+    IO_6:
+      base: bool
+      start: 6
+    IO_5:
+      base: bool
+      start: 5
+    IO_4:
+      base: bool
+      start: 4
+    IO_3:
+      base: bool
+      start: 3
+    IO_2:
+      base: bool
+      start: 2
+    IO_1:
+      base: bool
+      start: 1
+    IO_0:
+      base: bool
+      start: 0
+
+InterruptMaskB:
+  type: register
+  address: 0x08
+  size_bits: 8
+  description: "Interrupt mask register for Bank B I/O[15:8]"
+  fields:
+    IO_15:
+      base: bool
+      start: 7
+    IO_14:
+      base: bool
+      start: 6
+    IO_13:
+      base: bool
+      start: 5
+    IO_12:
+      base: bool
+      start: 4
+    IO_11:
+      base: bool
+      start: 3
+    IO_10:
+      base: bool
+      start: 2
+    IO_09:
+      base: bool
+      start: 1
+    IO_08:
+      base: bool
+      start: 0
+
+InterruptMaskA:
+  type: register
+  address: 0x09
+  size_bits: 8
+  description: "Interrupt mask register for Bank A I/O[7:0]"
+  fields:
+    IO_7:
+      base: bool
+      start: 7
+    IO_6:
+      base: bool
+      start: 6
+    IO_5:
+      base: bool
+      start: 5
+    IO_4:
+      base: bool
+      start: 4
+    IO_3:
+      base: bool
+      start: 3
+    IO_2:
+      base: bool
+      start: 2
+    IO_1:
+      base: bool
+      start: 1
+    IO_0:
+      base: bool
+      start: 0

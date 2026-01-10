@@ -1,0 +1,22 @@
+[package]
+name = "sx150x"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bisync = "0.3"
+critical-section = "1.2.0"
+embedded-hal = "1.0.0"
+embedded-hal-async = { package = "embedded-hal-async", git = "https://github.com/rust-embedded/embedded-hal", rev = "cb1f73e4bec46daa47d1a405ceb413d2fe6acb69" }
+device-driver = { version = "1.0.7", default-features = false, features = [
+    "yaml",
+] }
+defmt = { version = "0.3", optional = true }
+thiserror = { version = "2.0.12", default-features = false }
+
+[dev-dependencies]
+embedded-hal-mock = { version = "0.11.1", features = ["embedded-hal-async"] }
+tokio = { version = "1.21.1", features = ["rt", "macros", "time"] }
+
+[features]
+defmt-03 = ["dep:defmt", "device-driver/defmt-03"]

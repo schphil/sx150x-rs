@@ -9,9 +9,9 @@ A `no_std` driver for the SX150x family of I²C GPIO expanders, providing both s
 use sx150x::{Sx1503, Input, Pull};
 use embedded_hal_async::i2c::I2c;
 
-let mut i2c = I2c::new(...);
+let mut i2c = I2c::new(..);
 let pins =  Sx1503::take_pins().unwrap();
-let mut input = Input::new(pins.pin0, i2c, Pull::Up);
+let mut input = Input::new(pins.pin0, i2c, Pull::Up).unwrap();
 let is_high = input.is_high()?;
 ```
 
@@ -20,9 +20,9 @@ let is_high = input.is_high()?;
 use sx150x::{Sx1503, OutputAsync, Level};
 use embedded_hal_async::i2c::I2c;
 
-let mut i2c = I2c::new(...);
+let mut i2c = I2c::new(..);
 let pins =  Sx1503::take_pins().unwrap();
-let mut output = OutputAsync::new(pins.pin8, i2c, Level::Low);
+let mut output = OutputAsync::new(pins.pin8, i2c, Level::Low).await.unwrap();
 output.set_high().await?;
 ```
 

@@ -6,7 +6,7 @@ mod pin;
 
 pub use bisync_gpio::{Level, Pull};
 pub use driver::Sx1503;
-pub use pin::Pins;
+pub use pin::*;
 
 pub const ADDR: u8 = 0x20;
 
